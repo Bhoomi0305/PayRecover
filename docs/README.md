@@ -8,10 +8,6 @@ track).
 
 When a payment fails, PayRecover:
 
-## What it does
-
-When a payment fails, PayRecover:
-
 1. **Classifies** the root cause — via fast rule-based lookup for
    clean, payment-method-compatible failure codes, or an LLM
    (constrained to method-plausible outcomes) for ambiguous raw
