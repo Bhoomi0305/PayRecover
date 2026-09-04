@@ -12,46 +12,72 @@ full audit trail of what happened and why.
 
 ## Pipeline overview
 
-                    Failed Payment
-                         │
-                         ▼
+```
+                  Failed Payment
+                        │
+                        ▼
 
-┌────────────────────────────────────────────────┐
-│ Classification │
-| Rule-based lookup for clean failure codes; │
-│ LLM (Gemini 3.5 Flash-Lite) for ambiguous │
-│ raw gateway messages |
-└────────────────────────┬───────────────────────┘
-▼
-┌─────────────────────────────────────────────────────┐
-│ Recovery Decision │
-| Guardrailed decision: retry cap, confidence |
-│ floor, non-recoverable check, high-value │
-│ caution, then taxonomy-driven default strategy |
-└────────────────────────┬────────────────────────────┘
-▼
 ┌─────────────────────────────────────────────────┐
-│ Execution │
-| Simulates carrying out the decided action │
-│ (retry, notify, escalate); |
-| updates status |
-└────────────────────────┬────────────────────────┘
-▼
-Loop back to Recovery Decision if not yet terminal
+│ 1. Classification                               │
+| Rule-based lookup for clean, payment-method-    |
+│ Agent (LLM) compatible failure codes;           │
+│ LLM (Gemini 3.5 Flash-Lite) for ambiguous       │
+│ raw gateway messages, constrained to            │
+│ method-plausible outcomes                       |
+└───────────────────────┬─────────────────────────┘
+                        ▼
+┌─────────────────────────────────────────────────┐
+│ 2. Recovery Decision                            │
+| Deterministic guardrails, checked in order:     |
+│ layer (rule-based)                              │
+| retry cap → confidence floor → non-recoverable  |
+│ check → high-value caution → taxonomy default   |
+└───────────────────────┬─────────────────────────┘
+                        ▼
+┌─────────────────────────────────────────────────┐
+│ 3. Compliance                                   │
+| Independently reviews any action that would     |
+│ Reviewer Agent (LLM) actually retry/redirect a  |
+| payment;                                        │
+│ can override to escalation. Non-money-touching  │
+│ decisions pass through unreviewed.              |
+└───────────────────────┬─────────────────────────┘
+                        ▼
+┌─────────────────────────────────────────────────┐
+│ Execution                                       │
+| Simulates carrying out the decided action;      │
+| updates status and retry count                  |
+└───────────────────────┬─────────────────────────┘
+                        ▼
+Loop back to Recovery Decision (Step 2) if not yet terminal
 (bounded by MAX_RETRIES=3, safety cap of 5 iterations)
-│
-▼
+                        │
+                        ▼
 ┌─────────────────────────────────────────────────┐
-│ Audit Trail │
-| Assembles all four stages + a plain-language │
-│ narrative per payment, plus aggregate metrics |
+│ Audit Trail                                     │
+| Assembles all four stages + a plain-language    │
+│ narrative per payment, plus aggregate metrics   |
+└───────────────────────┬─────────────────────────┘
+                        ▼
+┌─────────────────────────────────────────────────┐
+│ 4. Notification                                 │
+| Post-processing step: drafts the customer-      |
+│ Agent (LLM) facing message for any payment      │
+│ where a customer notification was part of the   │
+│ recovery path. Does not affect any decision     │
+│ or metric.                                      |
 └─────────────────────────────────────────────────┘
+```
 
 Each stage is a separate, independently testable module
-(`classifier.py`, `recovery.py`, `execution.py`, `recovery_loop.py`,
-`audit_trail.py`), each with a batch runner that processes the full
-dataset and prints a summary. This separation let each stage be built,
-tested, and debugged in isolation before being wired into the full loop.
+(`classifier.py`, `recovery.py`, `reviewer.py`, `execution.py`,
+`recovery_loop.py`, `audit_trail.py`, `notifier.py`), each with a
+batch runner that processes the full dataset and prints a summary.
+This separation let each stage be built, tested, and debugged in
+isolation before being wired into the full loop - and in practice,
+it's what allowed the Compliance Reviewer Agent to be added later
+without touching classification, execution, or audit trail logic
+at all.
 
 ## Why AI is used only where it's needed
 

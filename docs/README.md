@@ -8,15 +8,26 @@ track).
 
 When a payment fails, PayRecover:
 
-1. **Classifies** the root cause — via fast rule-based lookup for clean
-   failure codes, or an LLM for ambiguous raw gateway messages
-2. **Decides** a recovery action within safety guardrails (retry limits,
-   confidence thresholds, non-recoverable-failure checks, high-value
-   caution)
-3. **Executes** that action (simulated) and re-evaluates if not yet
-   resolved, looping within bounds
-4. **Logs** everything to a full audit trail with a plain-language
+## What it does
+
+When a payment fails, PayRecover:
+
+1. **Classifies** the root cause — via fast rule-based lookup for
+   clean, payment-method-compatible failure codes, or an LLM
+   (constrained to method-plausible outcomes) for ambiguous raw
+   gateway messages
+2. **Decides** a recovery action using deterministic guardrails —
+   retry limits, confidence thresholds, non-recoverable-failure
+   checks, and high-value caution
+3. **Reviews** the proposed action with an independent Compliance
+   Reviewer Agent, which can override to escalation before anything
+   executes
+4. **Executes** the approved action (simulated) and re-evaluates if
+   not yet resolved, looping within bounds
+5. **Logs** everything to a full audit trail with a plain-language
    narrative per payment
+6. **Notifies** the customer, where applicable, via a drafted
+   message generated after the outcome is final
 
 See [`docs/architecture.md`](docs/architecture.md) for the full design,
 guardrails, and known limitations.
@@ -97,6 +108,7 @@ Python · FastAPI · Gemini API (3.5 Flash-Lite) · HTML/CSS/JS
    python3 -m backend.agents.batch_classify --dataset full
    python3 -m backend.agents.batch_recovery_loop --dataset full
    python3 -m backend.agents.audit_trail --dataset full
+   python3 -m backend.agents.batch_notify --dataset full
 4. Start the server and view the dashboard:
    uvicorn backend.main:app --reload
    Open `http://127.0.0.1:8000`
