@@ -1,0 +1,4549 @@
+[
+  {
+    "payment_id": "pay_f27367b9a4cf",
+    "customer_name": "Ananya Iyer",
+    "amount": 928.76,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-09-01T01:55:42.783541",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.890268",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_3fdc1d77aec7",
+    "customer_name": "Rohan Mehta",
+    "amount": 6543.55,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-29T08:31:42.783584",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.890659",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_d72489f7da70",
+    "customer_name": "Arjun Nair",
+    "amount": 7828.04,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-22T16:01:42.783603",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.890895",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_32698240c249",
+    "customer_name": "Ishita Joshi",
+    "amount": 10406.69,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-09-01T18:12:42.783619",
+    "failure_code": "INVALID_CARD_DETAILS",
+    "raw_gateway_message": "Expired card, wrong CVV, or invalid card number",
+    "retry_count": 0,
+    "status": "PENDING_CUSTOMER_ACTION",
+    "resolved_failure_code": "INVALID_CARD_DETAILS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_CUSTOMER_ONLY",
+    "recovery_reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.891013",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_CUSTOMER_ONLY",
+        "reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_a997e1dd944b",
+    "customer_name": "Divya Rao",
+    "amount": 5317.33,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-09-02T22:41:42.783634",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Txn declined by issuing bank. Contact your bank for details.",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The message explicitly states the transaction was declined by the issuing bank.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.891078",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_6bb3e5145ee9",
+    "customer_name": "Priya Patel",
+    "amount": 10541.49,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-01T09:11:42.783649",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.10541.49) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.891187",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.10541.49) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_ab1b38b07d70",
+    "customer_name": "Ananya Iyer",
+    "amount": 5159.21,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-30T09:35:42.783668",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Unable to process - account restrictions apply.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Account restrictions often indicate a security or risk-based block placed by the financial institution.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.891244",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_5716c7d8db66",
+    "customer_name": "Priya Patel",
+    "amount": 6534.01,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-27T11:57:42.783683",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 3,
+    "status": "UNRECOVERABLE",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NO_ACTION_MAX_RETRIES",
+    "recovery_reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.891332",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 3
+      },
+      {
+        "action": "NO_ACTION_MAX_RETRIES",
+        "reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_1cc9a0dfeaff",
+    "customer_name": "Priya Patel",
+    "amount": 948.84,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-21T22:11:42.783698",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.891409",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_0c1d9f91132d",
+    "customer_name": "Rohan Mehta",
+    "amount": 3977.04,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-26T17:31:42.783712",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Unable to process - account restrictions apply.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Account restrictions indicate the issuing bank or risk system has blocked the transaction for security or compliance reasons.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.891517",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_65ad4d473069",
+    "customer_name": "Arjun Nair",
+    "amount": 1230.6,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-09-01T18:16:42.783727",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.891661",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_64edf15929e2",
+    "customer_name": "Ananya Iyer",
+    "amount": 9666.43,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-31T13:26:42.783741",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.891796",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_faa0a6f7f698",
+    "customer_name": "Ishita Joshi",
+    "amount": 2743.48,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-31T19:08:42.783757",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.892159",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_5f9df2022871",
+    "customer_name": "Divya Rao",
+    "amount": 7547.4,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-22T15:23:42.783770",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Txn declined by issuing bank. Contact your bank for details.",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The message explicitly states the transaction was declined by the issuing bank.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.892281",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_7151113aee16",
+    "customer_name": "Arjun Nair",
+    "amount": 10883.84,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-09-02T09:21:42.783783",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Unable to process - account restrictions apply.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Account restrictions indicate the issuing bank or system has placed a block on the account due to risk or compliance policies.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.892394",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_260dec1008b2",
+    "customer_name": "Divya Rao",
+    "amount": 1003.91,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-27T21:30:42.783870",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.892519",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_d67744f3f6fd",
+    "customer_name": "Divya Rao",
+    "amount": 1109.59,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-19T17:13:42.783891",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.892676",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_e7592afc4995",
+    "customer_name": "Ananya Iyer",
+    "amount": 2576.28,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-23T05:07:42.783905",
+    "failure_code": "INVALID_CARD_DETAILS",
+    "raw_gateway_message": "Expired card, wrong CVV, or invalid card number",
+    "retry_count": 0,
+    "status": "PENDING_CUSTOMER_ACTION",
+    "resolved_failure_code": "INVALID_CARD_DETAILS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_CUSTOMER_ONLY",
+    "recovery_reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.892814",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_CUSTOMER_ONLY",
+        "reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_ed8f86a4d120",
+    "customer_name": "Aarav Sharma",
+    "amount": 4329.74,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-09-01T08:13:42.783919",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.892938",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_415e2e86adc8",
+    "customer_name": "Sneha Reddy",
+    "amount": 9996.07,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-28T16:16:42.783933",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.893077",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_80ff8e1e3ab8",
+    "customer_name": "Divya Rao",
+    "amount": 13157.82,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-23T08:07:42.783948",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.893187",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_67613822869c",
+    "customer_name": "Rohan Mehta",
+    "amount": 2566.57,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-22T08:17:42.783962",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.893302",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_37e9b8121c49",
+    "customer_name": "Sneha Reddy",
+    "amount": 2062.33,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-25T10:10:42.783976",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Authentication failed at bank end.",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.8,
+    "classification_reasoning": "Authentication failure at the bank typically relates to 3D Secure or OTP verification issues.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.893427",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_37866f65b51b",
+    "customer_name": "Priya Patel",
+    "amount": 6232.79,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-03T01:05:42.783990",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.893532",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_185752db3dd9",
+    "customer_name": "Rohan Mehta",
+    "amount": 7625.27,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-26T01:19:42.784005",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.893629",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_20e9735260d5",
+    "customer_name": "Arjun Nair",
+    "amount": 765.11,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-24T08:17:42.784021",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Your bank has declined this transaction. RC: 51",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "Response code 51 is the standard ISO 8583 bank response code indicating insufficient funds or a general decline by the issuing bank.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.893716",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_864d8d482f9a",
+    "customer_name": "Vikram Singh",
+    "amount": 3444.31,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-19T14:13:42.784035",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.893793",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_eb5abd922eb8",
+    "customer_name": "Sneha Reddy",
+    "amount": 8201.92,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-24T02:17:42.784051",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 3,
+    "status": "UNRECOVERABLE",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NO_ACTION_MAX_RETRIES",
+    "recovery_reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.893902",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 3
+      },
+      {
+        "action": "NO_ACTION_MAX_RETRIES",
+        "reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_cf904293fd4c",
+    "customer_name": "Rohan Mehta",
+    "amount": 12763.74,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-19T12:25:42.784065",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.12763.74) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.893996",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.12763.74) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_7b27482a1d23",
+    "customer_name": "Karan Kapoor",
+    "amount": 8552.9,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-29T19:36:42.784079",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Card issuer declined - do not honour.",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The message explicitly states the card issuer declined the transaction with a do not honour status.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.894134",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_b2637d3d48cf",
+    "customer_name": "Aarav Sharma",
+    "amount": 9548.39,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-30T11:04:42.784093",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.894343",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_fa9da38b7c4b",
+    "customer_name": "Ananya Iyer",
+    "amount": 657.81,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-27T15:09:42.784107",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Authentication failed at bank end.",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Authentication failure at the bank end commonly refers to incorrect or expired OTP during 3DS verification.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.894423",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_29045e3dbe21",
+    "customer_name": "Sneha Reddy",
+    "amount": 6319.49,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-23T08:05:42.784121",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.894479",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_59f522364c54",
+    "customer_name": "Vikram Singh",
+    "amount": 1860.6,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-02T21:48:42.784137",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.894558",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_0ee39af82284",
+    "customer_name": "Karan Kapoor",
+    "amount": 5902.49,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-27T07:14:42.784152",
+    "failure_code": "INVALID_CARD_DETAILS",
+    "raw_gateway_message": "Expired card, wrong CVV, or invalid card number",
+    "retry_count": 0,
+    "status": "PENDING_CUSTOMER_ACTION",
+    "resolved_failure_code": "INVALID_CARD_DETAILS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_CUSTOMER_ONLY",
+    "recovery_reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.894705",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_CUSTOMER_ONLY",
+        "reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_ade809683924",
+    "customer_name": "Aarav Sharma",
+    "amount": 4955.08,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-28T12:22:42.784167",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The message explicitly states that the risk check was unsuccessful.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.894801",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_37c4f3bd5e38",
+    "customer_name": "Divya Rao",
+    "amount": 2991.78,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-22T15:54:42.784181",
+    "failure_code": "INVALID_CARD_DETAILS",
+    "raw_gateway_message": "Expired card, wrong CVV, or invalid card number",
+    "retry_count": 0,
+    "status": "PENDING_CUSTOMER_ACTION",
+    "resolved_failure_code": "INVALID_CARD_DETAILS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_CUSTOMER_ONLY",
+    "recovery_reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.894887",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_CUSTOMER_ONLY",
+        "reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_08f85f231d5f",
+    "customer_name": "Sneha Reddy",
+    "amount": 3792.86,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-25T21:14:42.784197",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The failure message explicitly indicates an unsuccessful risk check by the gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.894968",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_3d976c8d8ae3",
+    "customer_name": "Rohan Mehta",
+    "amount": 6010.63,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-27T07:33:42.784211",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895049",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f38a47e3facb",
+    "customer_name": "Ananya Iyer",
+    "amount": 4053.64,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-26T10:58:42.784225",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Transaction timed out while waiting for bank response.",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The raw message explicitly states that the transaction timed out while waiting for the bank response.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895142",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_1d07d9730537",
+    "customer_name": "Rohan Mehta",
+    "amount": 6532.37,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-25T03:46:42.784240",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895252",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_b093214c3004",
+    "customer_name": "Ananya Iyer",
+    "amount": 6707.24,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-21T19:17:42.784254",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895341",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_287b8c021df9",
+    "customer_name": "Ishita Joshi",
+    "amount": 5961.18,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-26T11:30:42.784268",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Authentication failed at bank end.",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Authentication failure at the bank end commonly refers to incorrect or expired OTP during 2FA.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895468",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_54365c60adca",
+    "customer_name": "Karan Kapoor",
+    "amount": 4691.32,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-31T04:42:42.784282",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895572",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_792a9ae7fc1b",
+    "customer_name": "Karan Kapoor",
+    "amount": 2186.75,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-09-02T08:11:42.784297",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment could not be completed due to a temporary issue. Please try again.",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "LLM",
+    "classification_confidence": 0.8,
+    "classification_reasoning": "The message mentions a temporary issue preventing completion, which typically points to a gateway or connectivity delay.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895683",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_642cf2c67cf2",
+    "customer_name": "Ishita Joshi",
+    "amount": 1503.71,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-23T08:51:42.784311",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895789",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_7d3ed6264747",
+    "customer_name": "Divya Rao",
+    "amount": 8764.55,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-20T07:58:42.784325",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895871",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_8c12ef45a28f",
+    "customer_name": "Ishita Joshi",
+    "amount": 2522.07,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-20T05:09:42.784338",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.895960",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_954884c350d6",
+    "customer_name": "Ananya Iyer",
+    "amount": 2652.49,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-22T16:11:42.784353",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.896055",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_bc5224c90356",
+    "customer_name": "Arjun Nair",
+    "amount": 1098.96,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-30T12:42:42.784366",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Card issuer declined - do not honour.",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The raw message explicitly states the card issuer declined the transaction.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.896290",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_0e76d2df2123",
+    "customer_name": "Priya Patel",
+    "amount": 3910.38,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-25T11:00:42.784379",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Authentication failed at bank end.",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Authentication failure at the bank end typically points to incorrect or expired OTP credentials.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.896527",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f79acc1a720c",
+    "customer_name": "Karan Kapoor",
+    "amount": 10527.81,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-20T07:02:42.784394",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The message explicitly indicates that the risk check was unsuccessful, directly corresponding to risk engine blocks.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.896598",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_81afd17fe0d0",
+    "customer_name": "Vikram Singh",
+    "amount": 7801.86,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-25T01:39:42.784408",
+    "failure_code": "INVALID_CARD_DETAILS",
+    "raw_gateway_message": "Expired card, wrong CVV, or invalid card number",
+    "retry_count": 0,
+    "status": "PENDING_CUSTOMER_ACTION",
+    "resolved_failure_code": "INVALID_CARD_DETAILS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_CUSTOMER_ONLY",
+    "recovery_reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.896657",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_CUSTOMER_ONLY",
+        "reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_a1f66d2ef9c6",
+    "customer_name": "Ishita Joshi",
+    "amount": 2191.51,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-27T01:02:42.784421",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.896755",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_77a090bea86b",
+    "customer_name": "Rohan Mehta",
+    "amount": 9210.22,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-24T08:25:42.784436",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The message explicitly states that the risk check was unsuccessful.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.896863",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_c85ad0706512",
+    "customer_name": "Priya Patel",
+    "amount": 6334.85,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-20T11:15:42.784449",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.896933",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_21f44e300aec",
+    "customer_name": "Sneha Reddy",
+    "amount": 2127.99,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-28T13:09:42.784463",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The raw message explicitly states that the risk check was unsuccessful.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.896985",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_4440f7851cd0",
+    "customer_name": "Vikram Singh",
+    "amount": 9109.54,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-09-02T01:52:42.784477",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.897039",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_dcc50120f2f6",
+    "customer_name": "Ananya Iyer",
+    "amount": 6425.0,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-22T01:11:42.784492",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Card issuer declined - do not honour.",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The error message explicitly states that the card issuer declined the transaction.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.897108",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_50de6913fe06",
+    "customer_name": "Divya Rao",
+    "amount": 1652.81,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-26T04:19:42.784505",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Txn declined by issuing bank. Contact your bank for details.",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The raw message explicitly states the transaction was declined by the issuing bank.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.897185",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_30042a3eaac4",
+    "customer_name": "Ishita Joshi",
+    "amount": 7052.38,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-31T05:48:42.784519",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.897241",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_ab088141adc3",
+    "customer_name": "Rohan Mehta",
+    "amount": 12276.99,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-25T00:27:42.784532",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.12276.99) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.897307",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.12276.99) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_bf18143f9f75",
+    "customer_name": "Karan Kapoor",
+    "amount": 11492.67,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-09-01T06:42:42.784546",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The failure message explicitly states that the risk check was unsuccessful.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.897364",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_37029cf992ba",
+    "customer_name": "Priya Patel",
+    "amount": 7022.39,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-20T03:48:42.784559",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.897459",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_fa9f68fb9d78",
+    "customer_name": "Sneha Reddy",
+    "amount": 5090.16,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-01T08:45:42.784574",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.897587",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_e637f7a3be92",
+    "customer_name": "Ishita Joshi",
+    "amount": 1288.96,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-23T10:41:42.784590",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.98,
+    "classification_reasoning": "The raw message explicitly states that the risk check was unsuccessful.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.897664",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_c76d9c88b065",
+    "customer_name": "Arjun Nair",
+    "amount": 12306.21,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-24T07:37:42.784618",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Your bank has declined this transaction. RC: 51",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Response code 51 explicitly indicates that the transaction was declined by the issuing bank.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.12306.21) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.897730",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.12306.21) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_0898de168b60",
+    "customer_name": "Divya Rao",
+    "amount": 2599.82,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-20T23:09:42.784633",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.897807",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_2ee1434812db",
+    "customer_name": "Ishita Joshi",
+    "amount": 5491.77,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-29T00:55:42.784647",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.897865",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_b4242f7dcb31",
+    "customer_name": "Ishita Joshi",
+    "amount": 2131.74,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-28T16:30:42.784661",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 3,
+    "status": "UNRECOVERABLE",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NO_ACTION_MAX_RETRIES",
+    "recovery_reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.897952",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 3
+      },
+      {
+        "action": "NO_ACTION_MAX_RETRIES",
+        "reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_3366600549e5",
+    "customer_name": "Arjun Nair",
+    "amount": 499.5,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-09-01T17:40:42.784674",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.898009",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_fa941c87250c",
+    "customer_name": "Ishita Joshi",
+    "amount": 6373.18,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-27T01:21:42.784688",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898076",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_d7badc843ede",
+    "customer_name": "Ananya Iyer",
+    "amount": 2924.5,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-26T07:53:42.784702",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The message explicitly states that the risk check was unsuccessful, which directly aligns with the risk blocked category.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.898133",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_25e91b30a5ce",
+    "customer_name": "Sneha Reddy",
+    "amount": 7097.33,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-29T17:12:42.784716",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Card issuer declined - do not honour.",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The message explicitly states that the card issuer declined the transaction.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898196",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_70539a5f1161",
+    "customer_name": "Sneha Reddy",
+    "amount": 1396.81,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-30T18:39:42.784732",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Authentication failed at bank end.",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Authentication failure at the bank end typically points to a failed OTP verification during 3DS processing.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898308",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_938d81957e67",
+    "customer_name": "Priya Patel",
+    "amount": 9068.96,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-30T14:15:42.784746",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.898396",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_7186e5c6a6d3",
+    "customer_name": "Vikram Singh",
+    "amount": 836.39,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-25T15:42:42.784760",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Your bank has declined this transaction. RC: 51",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 0.95,
+    "classification_reasoning": "The response code 51 explicitly indicates insufficient funds or a general decline by the issuing bank.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898456",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_5a8b5b19aecd",
+    "customer_name": "Priya Patel",
+    "amount": 9827.86,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-26T09:58:42.784776",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898519",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_644817ff3eb8",
+    "customer_name": "Vikram Singh",
+    "amount": 11480.5,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-09-01T23:01:42.784790",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Txn declined by issuing bank. Contact your bank for details.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The raw message explicitly states the transaction was declined by the issuing bank.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.11480.5) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.898582",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.11480.5) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_db30d504d40d",
+    "customer_name": "Rohan Mehta",
+    "amount": 1627.76,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-01T18:19:42.784805",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898652",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f329cfa5e569",
+    "customer_name": "Divya Rao",
+    "amount": 5786.76,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-21T09:02:42.784819",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898718",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_e2900a404259",
+    "customer_name": "Vikram Singh",
+    "amount": 9578.8,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-29T06:47:42.784832",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898775",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_dd2c0f44543f",
+    "customer_name": "Ananya Iyer",
+    "amount": 6128.3,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-23T23:16:42.784846",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment could not be completed due to a temporary issue. Please try again.",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "LLM",
+    "classification_confidence": 0.8,
+    "classification_reasoning": "The message mentions a temporary issue preventing completion, which often aligns with gateway or connectivity delays.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898841",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_fe08a83b4cda",
+    "customer_name": "Rohan Mehta",
+    "amount": 353.28,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-22T05:56:42.784860",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment could not be completed due to a temporary issue. Please try again.",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "LLM",
+    "classification_confidence": 0.8,
+    "classification_reasoning": "The message indicates a temporary issue and suggests retrying, which typically points to a gateway or communication timeout.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898909",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_26b5344b3dce",
+    "customer_name": "Vikram Singh",
+    "amount": 7152.05,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-09-01T04:12:42.784874",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Authentication failed at bank end.",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.8,
+    "classification_reasoning": "Authentication failure at the bank end commonly points to issues with two-factor authentication or OTP validation.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.898974",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_ca67070b087a",
+    "customer_name": "Karan Kapoor",
+    "amount": 1359.94,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-23T20:28:42.784889",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899030",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_4eb803433522",
+    "customer_name": "Priya Patel",
+    "amount": 941.56,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-24T01:34:42.784902",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Your bank has declined this transaction. RC: 51",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "Response code 51 explicitly indicates that the issuing bank has declined the transaction due to insufficient funds or a general decline.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899089",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_0781dc6dabdc",
+    "customer_name": "Ishita Joshi",
+    "amount": 1433.93,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-22T13:09:42.784938",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.899147",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_853d83cde0e9",
+    "customer_name": "Ishita Joshi",
+    "amount": 1097.94,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-19T11:39:42.784954",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899204",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_3e32a516f711",
+    "customer_name": "Aarav Sharma",
+    "amount": 1180.46,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-21T03:34:42.784968",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Transaction timed out while waiting for bank response.",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The raw message explicitly states that the transaction timed out while waiting for the bank's response.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899272",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f92b4d6805de",
+    "customer_name": "Rohan Mehta",
+    "amount": 4450.73,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-19T17:15:42.784981",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Txn declined by issuing bank. Contact your bank for details.",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The message explicitly states the transaction was declined by the issuing bank.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899332",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_67f5a44e3ef2",
+    "customer_name": "Ishita Joshi",
+    "amount": 12449.75,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-28T12:05:42.784995",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.12449.75) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.899396",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.12449.75) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_4645b727ce56",
+    "customer_name": "Rohan Mehta",
+    "amount": 3131.64,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-29T04:01:42.785008",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment could not be completed due to a temporary issue. Please try again.",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "LLM",
+    "classification_confidence": 0.8,
+    "classification_reasoning": "The message indicates a temporary issue and asks to try again, which typically points to a gateway or system timeout.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899467",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_e11369f06e7f",
+    "customer_name": "Ishita Joshi",
+    "amount": 1155.64,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-28T21:37:42.785023",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899526",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_1cbe3c22195b",
+    "customer_name": "Arjun Nair",
+    "amount": 4366.15,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-30T09:03:42.785037",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899586",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f9fdcf3b8219",
+    "customer_name": "Ishita Joshi",
+    "amount": 7897.62,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-29T08:18:42.785051",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899645",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_2a05ac4e9d5b",
+    "customer_name": "Ishita Joshi",
+    "amount": 1411.27,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-22T20:07:42.785065",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899704",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_1db3a61b0aa2",
+    "customer_name": "Priya Patel",
+    "amount": 2234.89,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-26T21:45:42.785079",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899763",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_9ba2574ecc2d",
+    "customer_name": "Vikram Singh",
+    "amount": 4840.16,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-27T09:56:42.785094",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.899833",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_47c2b1e747b7",
+    "customer_name": "Karan Kapoor",
+    "amount": 1957.27,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-20T23:09:42.785108",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Your bank has declined this transaction. RC: 51",
+    "retry_count": 3,
+    "status": "UNRECOVERABLE",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "Response code 51 explicitly indicates insufficient funds or a general decline by the issuing bank.",
+    "recovery_action": "NO_ACTION_MAX_RETRIES",
+    "recovery_reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.899914",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 3
+      },
+      {
+        "action": "NO_ACTION_MAX_RETRIES",
+        "reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_0a3260a467e5",
+    "customer_name": "Sneha Reddy",
+    "amount": 11282.57,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-21T01:08:42.785123",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.11282.57) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.899987",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.11282.57) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f54f0759f1b4",
+    "customer_name": "Rohan Mehta",
+    "amount": 4214.76,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-28T14:51:42.785138",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.900046",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_4d9e8ce0c0bd",
+    "customer_name": "Ishita Joshi",
+    "amount": 11243.31,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-22T17:50:42.785152",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.11243.31) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.900148",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.11243.31) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_571ddd02072e",
+    "customer_name": "Aarav Sharma",
+    "amount": 3029.13,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-22T13:02:42.785166",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.900401",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_db7099076510",
+    "customer_name": "Ishita Joshi",
+    "amount": 12280.99,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-25T07:05:42.785180",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.12280.99) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.900464",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.12280.99) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_2aceafbbf7d5",
+    "customer_name": "Priya Patel",
+    "amount": 5018.37,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-09-02T02:17:42.785194",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.900542",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_ff93bcdc1950",
+    "customer_name": "Priya Patel",
+    "amount": 4440.67,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-28T05:42:42.785208",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 3,
+    "status": "UNRECOVERABLE",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NO_ACTION_MAX_RETRIES",
+    "recovery_reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.900676",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 3
+      },
+      {
+        "action": "NO_ACTION_MAX_RETRIES",
+        "reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_7abb760fd515",
+    "customer_name": "Sneha Reddy",
+    "amount": 9429.18,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-28T04:41:42.785221",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.900734",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_558a4ce024ee",
+    "customer_name": "Arjun Nair",
+    "amount": 764.1,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-30T04:43:42.785235",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.900796",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_5a96c57f5392",
+    "customer_name": "Priya Patel",
+    "amount": 4092.91,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-21T04:41:42.785250",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.900860",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f66b17ed356a",
+    "customer_name": "Rohan Mehta",
+    "amount": 6980.46,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-09-02T14:36:42.785263",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.900921",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_595f4f3a35a3",
+    "customer_name": "Sneha Reddy",
+    "amount": 4061.31,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-25T11:50:42.785277",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Card issuer declined - do not honour.",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The raw message explicitly states that the card issuer declined the transaction with a do not honour status.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.900992",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_d085af0c528f",
+    "customer_name": "Rohan Mehta",
+    "amount": 1832.65,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-24T04:11:42.785291",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.901051",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_bfcb876520fb",
+    "customer_name": "Ananya Iyer",
+    "amount": 4357.99,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-26T16:44:42.785304",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.901110",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_8856c680d1f4",
+    "customer_name": "Vikram Singh",
+    "amount": 6768.48,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-09-01T11:04:42.785317",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Unable to process - account restrictions apply.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Account restrictions often indicate compliance or security risk blocks imposed by the bank or gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.901169",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_564c56a3a593",
+    "customer_name": "Karan Kapoor",
+    "amount": 6932.28,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-20T16:14:42.785331",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.901227",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_d3b75b3e1d42",
+    "customer_name": "Priya Patel",
+    "amount": 2338.26,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-24T15:42:42.785344",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.901284",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_5809d595a3dd",
+    "customer_name": "Vikram Singh",
+    "amount": 467.39,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-19T05:39:42.785364",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The error message explicitly mentions an unsuccessful risk check, which directly aligns with the risk engine flagging the transaction.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.901344",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_ed378955ec3c",
+    "customer_name": "Ananya Iyer",
+    "amount": 5912.38,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-30T05:14:42.785378",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.901400",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_d2ee681867f6",
+    "customer_name": "Priya Patel",
+    "amount": 10494.22,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-29T11:24:42.785394",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.10494.22) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.901463",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.10494.22) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_2531da5595e9",
+    "customer_name": "Priya Patel",
+    "amount": 10641.8,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-22T12:15:42.785408",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.10641.8) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.901525",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.10641.8) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_4dc7860e28bb",
+    "customer_name": "Arjun Nair",
+    "amount": 4767.22,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-20T20:10:42.785424",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Card issuer declined - do not honour.",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The message explicitly states the card issuer declined the transaction with a 'do not honour' response.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.901583",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_b1f93f0fd609",
+    "customer_name": "Vikram Singh",
+    "amount": 7701.6,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-21T21:57:42.785438",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.901662",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_2cc45ae0efd0",
+    "customer_name": "Ananya Iyer",
+    "amount": 9578.3,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-20T08:03:42.785453",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.901721",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_6e8afe6dca53",
+    "customer_name": "Aarav Sharma",
+    "amount": 2566.5,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-26T13:43:42.785467",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The message explicitly states that the risk check was unsuccessful.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.901781",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_70415ca08b57",
+    "customer_name": "Divya Rao",
+    "amount": 3594.19,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-01T04:12:42.785480",
+    "failure_code": "RISK_BLOCKED",
+    "raw_gateway_message": "Gateway risk engine flagged transaction as suspicious",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.901838",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_26f2600208c4",
+    "customer_name": "Divya Rao",
+    "amount": 2207.48,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-23T10:28:42.785495",
+    "failure_code": "INVALID_CARD_DETAILS",
+    "raw_gateway_message": "Expired card, wrong CVV, or invalid card number",
+    "retry_count": 0,
+    "status": "PENDING_CUSTOMER_ACTION",
+    "resolved_failure_code": "INVALID_CARD_DETAILS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_CUSTOMER_ONLY",
+    "recovery_reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.901897",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_CUSTOMER_ONLY",
+        "reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f8e1c4cc1579",
+    "customer_name": "Priya Patel",
+    "amount": 1553.93,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-29T10:19:42.785509",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.901956",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_e369eb9bb0e9",
+    "customer_name": "Karan Kapoor",
+    "amount": 4284.12,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-24T01:40:42.785524",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Your bank has declined this transaction. RC: 51",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "Response code 51 is the standard ISO 8583 reply code for insufficient funds or general decline by the issuing bank.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902039",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f774baf7e9e3",
+    "customer_name": "Priya Patel",
+    "amount": 9087.86,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-29T23:42:42.785538",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The raw message explicitly states that the risk check was unsuccessful.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.902126",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_2bd9fd453de9",
+    "customer_name": "Ishita Joshi",
+    "amount": 11776.33,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-01T04:03:42.785552",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.11776.33) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.902189",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.11776.33) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_6410f3c0d82b",
+    "customer_name": "Aarav Sharma",
+    "amount": 3752.98,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-09-01T11:21:42.785565",
+    "failure_code": "INVALID_CARD_DETAILS",
+    "raw_gateway_message": "Expired card, wrong CVV, or invalid card number",
+    "retry_count": 0,
+    "status": "PENDING_CUSTOMER_ACTION",
+    "resolved_failure_code": "INVALID_CARD_DETAILS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_CUSTOMER_ONLY",
+    "recovery_reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.902246",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_CUSTOMER_ONLY",
+        "reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_814b31308537",
+    "customer_name": "Aarav Sharma",
+    "amount": 8305.95,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-31T07:13:42.785580",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902302",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_c8a471413c60",
+    "customer_name": "Divya Rao",
+    "amount": 2163.07,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-28T20:36:42.785594",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Authentication failed at bank end.",
+    "retry_count": 3,
+    "status": "UNRECOVERABLE",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Authentication failure at the bank end typically indicates an incorrect or expired OTP during 3DS verification.",
+    "recovery_action": "NO_ACTION_MAX_RETRIES",
+    "recovery_reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.902378",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 3
+      },
+      {
+        "action": "NO_ACTION_MAX_RETRIES",
+        "reasoning": "Already attempted 3 times (max 3). Stopping automated recovery.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_d552c83d0e70",
+    "customer_name": "Vikram Singh",
+    "amount": 9544.78,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-31T08:10:42.785607",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902436",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_ac3fe99372b3",
+    "customer_name": "Aarav Sharma",
+    "amount": 1491.76,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-21T17:49:42.785621",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902503",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_13976704ec71",
+    "customer_name": "Vikram Singh",
+    "amount": 887.55,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-25T21:39:42.785635",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Your bank has declined this transaction. RC: 51",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "Response code 51 is the standard ISO 8583 reply code for insufficient funds/declined by issuing bank.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902559",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_c1851a2786ec",
+    "customer_name": "Sneha Reddy",
+    "amount": 4885.42,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-26T09:12:42.785654",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Unable to process - account restrictions apply.",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "LLM",
+    "classification_confidence": 0.85,
+    "classification_reasoning": "Account restrictions indicate the issuing bank is blocking the transaction.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902619",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_6ce0c1be5428",
+    "customer_name": "Arjun Nair",
+    "amount": 2884.75,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-09-02T09:32:42.785668",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902693",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'INSUFFICIENT_FUNDS' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_957d8441026f",
+    "customer_name": "Ishita Joshi",
+    "amount": 7225.31,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-09-01T23:06:42.785682",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902763",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_f972baa24d26",
+    "customer_name": "Rohan Mehta",
+    "amount": 2656.06,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-27T05:53:42.785695",
+    "failure_code": "GATEWAY_TIMEOUT",
+    "raw_gateway_message": "Bank or gateway server did not respond in time",
+    "retry_count": 1,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902820",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 1
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_1bb5c9783954",
+    "customer_name": "Priya Patel",
+    "amount": 8405.62,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-20T04:45:42.785708",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Payment failed - risk check unsuccessful.",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "RISK_BLOCKED",
+    "classification_method": "LLM",
+    "classification_confidence": 0.99,
+    "classification_reasoning": "The failure message explicitly mentions that the risk check was unsuccessful.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.902878",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_2ed966f77ab3",
+    "customer_name": "Karan Kapoor",
+    "amount": 4263.66,
+    "currency": "INR",
+    "payment_method": "upi",
+    "failed_at": "2026-08-27T14:34:42.785722",
+    "failure_code": "CARD_DECLINED_BY_ISSUER",
+    "raw_gateway_message": "Issuing bank declined this specific transaction",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "CARD_DECLINED_BY_ISSUER",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "SUGGEST_ALT_METHOD",
+    "recovery_reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.902945",
+    "attempt_history": [
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "SUGGEST_ALT_METHOD",
+        "reasoning": "Standard strategy for 'CARD_DECLINED_BY_ISSUER' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_74b0044f6220",
+    "customer_name": "Priya Patel",
+    "amount": 2979.83,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-23T17:03:42.785735",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "DELAYED_RETRY",
+    "recovery_reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.903010",
+    "attempt_history": [
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "DELAYED_RETRY",
+        "reasoning": "Standard strategy for 'DAILY_LIMIT_EXCEEDED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_09340ce5d587",
+    "customer_name": "Priya Patel",
+    "amount": 1179.69,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-09-01T12:20:42.785749",
+    "failure_code": "NETWORK_ERROR",
+    "raw_gateway_message": "Connection dropped during payment",
+    "retry_count": 2,
+    "status": "RECOVERED",
+    "resolved_failure_code": "NETWORK_ERROR",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.903074",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'NETWORK_ERROR' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 2
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_3afa22bd78ea",
+    "customer_name": "Rohan Mehta",
+    "amount": 5343.94,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-23T22:00:42.785763",
+    "failure_code": "INVALID_CARD_DETAILS",
+    "raw_gateway_message": "Expired card, wrong CVV, or invalid card number",
+    "retry_count": 0,
+    "status": "PENDING_CUSTOMER_ACTION",
+    "resolved_failure_code": "INVALID_CARD_DETAILS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_CUSTOMER_ONLY",
+    "recovery_reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.903130",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_CUSTOMER_ONLY",
+        "reasoning": "'INVALID_CARD_DETAILS' requires the customer to fix something (not auto-recoverable).",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_ace11f8d3248",
+    "customer_name": "Aarav Sharma",
+    "amount": 12422.83,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-08-28T21:50:42.785777",
+    "failure_code": "DAILY_LIMIT_EXCEEDED",
+    "raw_gateway_message": "Customer exceeded their bank's daily transaction limit",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "DAILY_LIMIT_EXCEEDED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.12422.83) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.903191",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.12422.83) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_e3a4f48572ea",
+    "customer_name": "Ishita Joshi",
+    "amount": 2231.14,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-08-28T08:03:42.785790",
+    "failure_code": "OTP_FAILED",
+    "raw_gateway_message": "Wrong OTP entered or OTP expired",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "OTP_FAILED",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "NOTIFY_AND_RETRY",
+    "recovery_reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.903265",
+    "attempt_history": [
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "NOTIFY_AND_RETRY",
+        "reasoning": "Standard strategy for 'OTP_FAILED' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_bfe25a5134cc",
+    "customer_name": "Divya Rao",
+    "amount": 2246.91,
+    "currency": "INR",
+    "payment_method": "wallet",
+    "failed_at": "2026-08-20T07:37:42.785803",
+    "failure_code": "AMBIGUOUS",
+    "raw_gateway_message": "Transaction timed out while waiting for bank response.",
+    "retry_count": 3,
+    "status": "RECOVERED",
+    "resolved_failure_code": "GATEWAY_TIMEOUT",
+    "classification_method": "LLM",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "The raw message explicitly states that the transaction timed out while waiting for a bank response.",
+    "recovery_action": "IMMEDIATE_RETRY",
+    "recovery_reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+    "execution_outcome": "SUCCESS",
+    "executed_at": "2026-09-03T01:53:35.903335",
+    "attempt_history": [
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 1
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "FAILED_ATTEMPT",
+        "retry_count_after": 2
+      },
+      {
+        "action": "IMMEDIATE_RETRY",
+        "reasoning": "Standard strategy for 'GATEWAY_TIMEOUT' applied.",
+        "outcome": "SUCCESS",
+        "retry_count_after": 3
+      }
+    ]
+  },
+  {
+    "payment_id": "pay_439b5e62e9e2",
+    "customer_name": "Divya Rao",
+    "amount": 11139.35,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-02T20:09:42.785818",
+    "failure_code": "INSUFFICIENT_FUNDS",
+    "raw_gateway_message": "Customer's account/card had insufficient balance",
+    "retry_count": 0,
+    "status": "ESCALATED",
+    "resolved_failure_code": "INSUFFICIENT_FUNDS",
+    "classification_method": "RULE_BASED",
+    "classification_confidence": 1.0,
+    "classification_reasoning": "Clean failure code provided by gateway.",
+    "recovery_action": "ESCALATE_HUMAN",
+    "recovery_reasoning": "Amount (Rs.11139.35) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+    "execution_outcome": "NO_AUTOMATED_ACTION",
+    "executed_at": "2026-09-03T01:53:35.903398",
+    "attempt_history": [
+      {
+        "action": "ESCALATE_HUMAN",
+        "reasoning": "Amount (Rs.11139.35) exceeds high-value threshold (Rs.10000). Escalating for caution.",
+        "outcome": "NO_ATTEMPT_MADE"
+      }
+    ]
+  }
+]

@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>PayRecover</title>
-    </head>
-    <body>
-        <h1>PayRecover is alive 🎉</h1>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayRecover — Recovery Console</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>PayRecover</h1>
+      <p class="subtitle">Automated failed-payment detection, diagnosis and recovery</p>
+    </div>
+    <div class="generated-at" id="generatedAt"></div>
+  </header>
+
+  <section class="metrics-band" id="metricsBand" aria-label="Summary metrics">
+    <div class="metric-skeleton">Loading metrics…</div>
+  </section>
+
+  <section class="filter-bar" id="filterBar" aria-label="Filter by status"></section>
+
+  <main class="ledger" id="ledger" aria-label="Payment records">
+    <div class="ledger-empty">Loading payment records…</div>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
 </html>

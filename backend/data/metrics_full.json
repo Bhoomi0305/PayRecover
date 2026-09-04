@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-09-03T04:31:14.768984",
+  "total_payments_processed": 150,
+  "total_failed_value": 797155.8,
+  "total_recovered_value": 415791.45,
+  "recovery_rate_pct": 63.3,
+  "status_breakdown": {
+    "ESCALATED": 41,
+    "RECOVERED": 95,
+    "PENDING_CUSTOMER_ACTION": 8,
+    "UNRECOVERABLE": 6
+  },
+  "classification_breakdown": {
+    "RULE_BASED": 101,
+    "LLM": 49,
+    "LLM_FALLBACK": 0
+  }
+}
