@@ -39,6 +39,10 @@ def build_audit_entry(payment: dict) -> dict:
             "action": payment["recovery_action"],
             "reasoning": payment["recovery_reasoning"],
         },
+        "stage_3b_compliance_review": {
+            "approved": payment.get("review_approved"),
+            "reasoning": payment.get("review_reasoning"),
+        },
         "stage_4_execution": {
             "outcome": payment["execution_outcome"],
             "final_status": payment["status"],
@@ -53,13 +57,17 @@ def build_narrative(payment: dict) -> str:
     """One human-readable sentence summarizing the whole journey - this
     is what you'd actually show a judge or put in a UI, rather than
     making them read four nested JSON blocks."""
+    review_note = ""
+    if payment.get("review_approved") is False:
+        review_note = f" Compliance review overrode this to ESCALATE_HUMAN: {payment.get('review_reasoning')}"
     return (
         f"Payment of {payment['currency']} {payment['amount']} via "
         f"{payment['payment_method']} failed ({payment['raw_gateway_message']}). "
         f"Classified as {payment['resolved_failure_code']} via "
         f"{payment['classification_method']} "
         f"(confidence {payment['classification_confidence']}). "
-        f"Decision: {payment['recovery_action']} - {payment['recovery_reasoning']} "
+        f"Decision: {payment['recovery_action']} - {payment['recovery_reasoning']}"
+        f"{review_note} "
         f"Outcome: {payment['execution_outcome']}, final status "
         f"{payment['status']}."
     )

@@ -1,15 +1,15 @@
 const API = "/api";
 
-async function init() {
-  const [metrics, payments] = await Promise.all([
-    fetch(`${API}/metrics`).then(r => r.json()),
-    fetch(`${API}/payments`).then(r => r.json()),
-  ]);
+// async function init() {
+//   const [metrics, payments] = await Promise.all([
+//     fetch(`${API}/metrics`).then(r => r.json()),
+//     fetch(`${API}/payments`).then(r => r.json()),
+//   ]);
 
-  renderMetrics(metrics);
-  renderFilterBar(metrics, payments);
-  renderLedger(payments);
-}
+//   renderMetrics(metrics);
+//   renderFilterBar(metrics, payments);
+//   renderLedger(payments);
+// }
 
 function renderMetrics(metrics) {
   document.getElementById("generatedAt").textContent =
@@ -72,23 +72,27 @@ function renderLedger(payments) {
     return;
   }
 
-  ledger.innerHTML = payments.map(p => {
-    const status = p.stage_4_execution.final_status;
-    const methodLabel = METHOD_LABELS[p.stage_2_classification.method] || humanize(p.stage_2_classification.method);
-    const showConfidence = p.stage_2_classification.method !== "RULE_BASED";
+    ledger.innerHTML = payments.map(p => {
+    const status = p.stage_4_execution?.final_status ?? "UNKNOWN";
+    const action = p.stage_3_recovery_decision?.action ?? "UNKNOWN";
+    const actionReasoning = p.stage_3_recovery_decision?.reasoning ?? "";
+    const resolvedCode = p.stage_2_classification?.resolved_code ?? "UNKNOWN";
+    const methodLabel = METHOD_LABELS[p.stage_2_classification?.method] || humanize(p.stage_2_classification?.method ?? "");
+    const showConfidence = p.stage_2_classification?.method && p.stage_2_classification.method !== "RULE_BASED";
     const confidenceText = showConfidence
-      ? " · " + Math.round(p.stage_2_classification.confidence * 100) + "% confidence"
+      ? " · " + Math.round((p.stage_2_classification.confidence ?? 0) * 100) + "% confidence"
       : "";
-    const actionIcon = ACTION_ICONS[p.stage_3_recovery_decision.action] || "•";
+    const actionIcon = ACTION_ICONS[action] || "•";
     const outcomeIcon = status === "RECOVERED" ? "✓" : "◈";
-    const attemptWord = p.stage_4_execution.retry_count === 1 ? "attempt" : "attempts";
+    const retryCount = p.stage_4_execution?.retry_count ?? 0;
+    const attemptWord = retryCount === 1 ? "attempt" : "attempts";
 
     return `
-      <div class="ledger-row" data-id="${p.payment_id}">
+      <div class="ledger-row" data-id="${p.payment_id ?? "unknown"}">
         <div class="ledger-row-header" tabindex="0" role="button" aria-expanded="false">
-          <span class="payment-id">${p.payment_id}</span>
-          <span class="amount">₹${formatNumber(p.amount)}</span>
-          <span class="method">${p.payment_method}</span>
+          <span class="payment-id">${p.payment_id ?? "unknown"}</span>
+          <span class="amount">₹${formatNumber(p.amount ?? 0)}</span>
+          <span class="method">${p.payment_method ?? ""}</span>
           <span class="status-tag status-${status.toLowerCase()}">${toTitleCase(status)}</span>
           <span class="chevron">▸</span>
         </div>
@@ -98,14 +102,14 @@ function renderLedger(payments) {
               <div class="flow-icon">✕</div>
               <div class="flow-content">
                 <div class="flow-title">Failed</div>
-                <div class="flow-body">${humanize(p.stage_1_original_failure.reported_code)}</div>
+                <div class="flow-body">${humanize(p.stage_1_original_failure?.reported_code ?? "")}</div>
               </div>
             </div>
             <div class="flow-connector"></div>
             <div class="flow-step">
               <div class="flow-icon">◎</div>
               <div class="flow-content">
-                <div class="flow-title">Diagnosed as ${humanize(p.stage_2_classification.resolved_code)}</div>
+                <div class="flow-title">Diagnosed as ${humanize(resolvedCode)}</div>
                 <div class="flow-body">${methodLabel}${confidenceText}</div>
               </div>
             </div>
@@ -113,8 +117,8 @@ function renderLedger(payments) {
             <div class="flow-step">
               <div class="flow-icon">${actionIcon}</div>
               <div class="flow-content">
-                <div class="flow-title">${humanize(p.stage_3_recovery_decision.action)}</div>
-                <div class="flow-body">${p.stage_3_recovery_decision.reasoning}</div>
+                <div class="flow-title">${humanize(action)}</div>
+                <div class="flow-body">${actionReasoning}</div>
               </div>
             </div>
             <div class="flow-connector"></div>
@@ -122,7 +126,7 @@ function renderLedger(payments) {
               <div class="flow-icon">${outcomeIcon}</div>
               <div class="flow-content">
                 <div class="flow-title">${humanize(status)}</div>
-                <div class="flow-body">${p.stage_4_execution.retry_count} ${attemptWord}</div>
+                <div class="flow-body">${retryCount} ${attemptWord}</div>
               </div>
             </div>
           </div>
@@ -153,6 +157,105 @@ function toTitleCase(s) {
 }
 
 init();
+
+let currentRole = "admin";
+let allPayments = [];
+let currentMetrics = null;
+
+async function init() {
+  const [metrics, payments] = await Promise.all([
+    fetch(`${API}/metrics`).then(r => r.json()),
+    fetch(`${API}/payments`).then(r => r.json()),
+  ]);
+
+  currentMetrics = metrics;
+  allPayments = payments;
+
+  renderMetrics(metrics);
+  renderFilterBar(metrics, payments);
+  renderLedger(payments);
+  setupRoleSwitcher();
+}
+
+function setupRoleSwitcher() {
+  const switcher = document.getElementById("roleSwitcher");
+  switcher.querySelectorAll(".role-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      switcher.querySelectorAll(".role-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentRole = btn.dataset.role;
+      renderForRole(currentRole);
+    });
+  });
+}
+
+function renderForRole(role) {
+  const metricsBand = document.getElementById("metricsBand");
+  const filterBar = document.getElementById("filterBar");
+
+  if (role === "admin") {
+    metricsBand.style.display = "";
+    filterBar.style.display = "";
+    renderMetrics(currentMetrics);
+    renderFilterBar(currentMetrics, allPayments);
+    renderLedger(allPayments);
+  } else if (role === "reviewer") {
+    metricsBand.style.display = "none";
+    filterBar.style.display = "none";
+    renderReviewerQueue();
+  } else if (role === "customer") {
+    metricsBand.style.display = "none";
+    filterBar.style.display = "none";
+    renderCustomerInbox();
+  }
+}
+
+function renderReviewerQueue() {
+  const ledger = document.getElementById("ledger");
+  const escalated = allPayments.filter(
+    p => p.stage_4_execution.final_status === "ESCALATED"
+  );
+
+  if (escalated.length === 0) {
+    ledger.innerHTML = `<div class="ledger-empty">No escalated payments pending review.</div>`;
+    return;
+  }
+
+  ledger.innerHTML = `<h2 class="section-title">Escalated for review (${escalated.length})</h2>` +
+    escalated.map(p => `
+      <div class="review-card">
+        <div class="review-header">
+          <span class="payment-id">${p.payment_id}</span>
+          <span class="amount">₹${formatNumber(p.amount)}</span>
+        </div>
+        <div class="review-reason-label">Failure diagnosis</div>
+        <div class="review-reason">${humanize(p.stage_2_classification.resolved_code)} — ${p.stage_2_classification.reasoning}</div>
+        <div class="review-reason-label">Why this was escalated</div>
+        <div class="review-reason">${p.stage_3_recovery_decision.reasoning}</div>
+      </div>
+    `).join("");
+}
+
+function renderCustomerInbox() {
+  const ledger = document.getElementById("ledger");
+  const withNotifications = allPayments.filter(p => p.customer_notification);
+
+  if (withNotifications.length === 0) {
+    ledger.innerHTML = `<div class="ledger-empty">No notifications yet. Run the notification agent (batch_notify.py) to populate this view.</div>`;
+    return;
+  }
+
+  ledger.innerHTML = `<h2 class="section-title">Notifications (${withNotifications.length})</h2>` +
+    withNotifications.map(p => `
+      <div class="inbox-card">
+        <div class="inbox-meta">
+          <span>${p.customer_name}</span>
+          <span>₹${formatNumber(p.amount)}</span>
+        </div>
+        <p class="inbox-message">${p.customer_notification.message}</p>
+      </div>
+    `).join("");
+}
 
 function humanize(s) {
   if (!s) return "";

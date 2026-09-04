@@ -1,24 +1,19 @@
 import json
 import time
-import random as _random  # aliased to avoid clashing with any other 'random' usage later
+import random as _random
+
 import google.generativeai as genai
 
 from backend.config import GEMINI_API_KEY, USE_MOCK_LLM
-from backend.data.failure_taxonomy import FAILURE_TAXONOMY
+from backend.data.failure_taxonomy import FAILURE_TAXONOMY, METHOD_COMPATIBLE_CODES
 
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
-
 
 CLASSIFIABLE_CODES = [code for code in FAILURE_TAXONOMY if code != "AMBIGUOUS"]
 
 
 def classify_payment(payment: dict) -> dict:
-    """
-    Resolve a payment's true failure_code.
-    If it's already a clean code, use fast rule-based lookup (no API cost).
-    If it's AMBIGUOUS, call the LLM to interpret the raw message.
-    """
     if payment["failure_code"] != "AMBIGUOUS":
         return {
             "resolved_code": payment["failure_code"],
@@ -26,15 +21,17 @@ def classify_payment(payment: dict) -> dict:
             "confidence": 1.0,
             "reasoning": "Clean failure code provided by gateway.",
         }
+    return classify_with_llm(payment["raw_gateway_message"], payment["payment_method"])
 
-    return classify_with_llm(payment["raw_gateway_message"])
 
-
-def classify_with_llm(raw_message: str, max_attempts: int = 3) -> dict:
+def classify_with_llm(
+    raw_message: str, payment_method: str, max_attempts: int = 3
+) -> dict:
     if USE_MOCK_LLM:
-        return mock_classify(raw_message)
+        return mock_classify(raw_message, payment_method)
 
-    prompt = build_prompt(raw_message)
+    allowed_codes = METHOD_COMPATIBLE_CODES.get(payment_method, CLASSIFIABLE_CODES)
+    prompt = build_prompt(raw_message, payment_method, allowed_codes)
 
     for attempt in range(1, max_attempts + 1):
         try:
@@ -48,6 +45,15 @@ def classify_with_llm(raw_message: str, max_attempts: int = 3) -> dict:
             )
             raw_output = response.text.strip()
             parsed = json.loads(raw_output)
+
+            if parsed["code"] not in allowed_codes:
+                return {
+                    "resolved_code": "RISK_BLOCKED",
+                    "method": "LLM_FAILED_FALLBACK",
+                    "confidence": 0.0,
+                    "reasoning": f"LLM returned a code incompatible with payment method: {parsed['code']}",
+                }
+
             return {
                 "resolved_code": parsed["code"],
                 "method": "LLM",
@@ -63,11 +69,7 @@ def classify_with_llm(raw_message: str, max_attempts: int = 3) -> dict:
             }
         except Exception as e:
             if attempt < max_attempts:
-                wait = 5**attempt
-                print(
-                    f"  Attempt {attempt} failed ({str(e)[:60]}), retrying in {wait}s..."
-                )
-                time.sleep(wait)
+                time.sleep(5**attempt)
             else:
                 return {
                     "resolved_code": "RISK_BLOCKED",
@@ -77,9 +79,9 @@ def classify_with_llm(raw_message: str, max_attempts: int = 3) -> dict:
                 }
 
 
-def mock_classify(raw_message: str) -> dict:
-    """Fake LLM response for testing the pipeline without real API calls/costs."""
-    fake_code = _random.choice(CLASSIFIABLE_CODES)
+def mock_classify(raw_message: str, payment_method: str) -> dict:
+    allowed_codes = METHOD_COMPATIBLE_CODES.get(payment_method, CLASSIFIABLE_CODES)
+    fake_code = _random.choice(allowed_codes)
     return {
         "resolved_code": fake_code,
         "method": "LLM_MOCK",
@@ -88,15 +90,16 @@ def mock_classify(raw_message: str) -> dict:
     }
 
 
-def build_prompt(raw_message: str) -> str:
+def build_prompt(raw_message: str, payment_method: str, allowed_codes: list) -> str:
     code_descriptions = "\n".join(
-        f"- {code}: {FAILURE_TAXONOMY[code]['description']}"
-        for code in CLASSIFIABLE_CODES
+        f"- {code}: {FAILURE_TAXONOMY[code]['description']}" for code in allowed_codes
     )
 
     return f"""You are a payment failure classification system for a fintech company.
 
-Classify the following raw bank/gateway failure message into exactly ONE of these categories:
+This payment was made via {payment_method}. Classify the following raw
+bank/gateway failure message into exactly ONE of these categories, which
+are the only categories plausible for a {payment_method} payment:
 
 {code_descriptions}
 

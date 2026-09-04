@@ -46,6 +46,38 @@ FAILURE_TAXONOMY = {
     },
 }
 
+METHOD_COMPATIBLE_CODES = {
+    "card": [
+        "INSUFFICIENT_FUNDS",
+        "CARD_DECLINED_BY_ISSUER",
+        "INVALID_CARD_DETAILS",
+        "RISK_BLOCKED",
+        "GATEWAY_TIMEOUT",
+        "DAILY_LIMIT_EXCEEDED",
+    ],
+    "upi": [
+        "INSUFFICIENT_FUNDS",
+        "OTP_FAILED",
+        "DAILY_LIMIT_EXCEEDED",
+        "NETWORK_ERROR",
+        "RISK_BLOCKED",
+        "GATEWAY_TIMEOUT",
+    ],
+    "netbanking": [
+        "INSUFFICIENT_FUNDS",
+        "GATEWAY_TIMEOUT",
+        "NETWORK_ERROR",
+        "DAILY_LIMIT_EXCEEDED",
+        "RISK_BLOCKED",
+    ],
+    "wallet": [
+        "INSUFFICIENT_FUNDS",
+        "DAILY_LIMIT_EXCEEDED",
+        "NETWORK_ERROR",
+        "RISK_BLOCKED",
+    ],
+}
+
 # Sample of realistic messy raw bank/gateway messages for cases we want
 # the LLM to classify instead of a clean code lookup
 AMBIGUOUS_RAW_MESSAGES = [

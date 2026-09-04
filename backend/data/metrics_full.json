@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-03T04:31:14.768984",
+  "generated_at": "2026-09-05T00:22:56.531654",
   "total_payments_processed": 150,
-  "total_failed_value": 797155.8,
-  "total_recovered_value": 415791.45,
-  "recovery_rate_pct": 63.3,
+  "total_failed_value": 794151.7,
+  "total_recovered_value": 416647.79,
+  "recovery_rate_pct": 61.3,
   "status_breakdown": {
-    "ESCALATED": 41,
-    "RECOVERED": 95,
-    "PENDING_CUSTOMER_ACTION": 8,
-    "UNRECOVERABLE": 6
+    "ESCALATED": 47,
+    "RECOVERED": 92,
+    "UNRECOVERABLE": 9,
+    "PENDING_CUSTOMER_ACTION": 2
   },
   "classification_breakdown": {
-    "RULE_BASED": 101,
-    "LLM": 49,
+    "RULE_BASED": 103,
+    "LLM": 47,
     "LLM_FALLBACK": 0
   }
 }

@@ -4,5 +4,4 @@ __pycache__/
 *.pyc
 backend/data/*_dev.json
 backend/data/*_custom.json
-backend/agents/reviewer.py
 scratch/

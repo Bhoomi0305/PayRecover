@@ -1,6 +1,9 @@
+import time
 from datetime import datetime
 from backend.agents.recovery import decide_recovery_action
 from backend.agents.execution import execute_recovery, NO_RETRY_ACTIONS
+from backend.agents.reviewer import review_decision, REVIEWABLE_ACTIONS
+from backend.config import USE_MOCK_LLM
 
 # Actions that don't attempt execution at all - reaching one of these
 # ends the loop immediately, no further attempts possible
@@ -21,19 +24,27 @@ def run_recovery_loop(payment: dict, max_iterations: int = 5) -> dict:
 
     for _ in range(max_iterations):
         decision = decide_recovery_action(current)
-        current["recovery_action"] = decision["action"]
-        current["recovery_reasoning"] = decision["reasoning"]
 
-        if decision["action"] in TERMINAL_NO_EXECUTION:
-            final_status = NO_RETRY_ACTIONS[decision["action"]]
+        review = review_decision(current, decision)
+        if decision["action"] in REVIEWABLE_ACTIONS and not USE_MOCK_LLM:
+            time.sleep(2)  # pace real reviewer API calls
+
+        current["recovery_action"] = review["final_action"]
+        current["recovery_reasoning"] = decision["reasoning"]
+        current["review_reasoning"] = review["review_reasoning"]
+        current["review_approved"] = review["approved"]
+
+        if current["recovery_action"] in TERMINAL_NO_EXECUTION:
+            final_status = NO_RETRY_ACTIONS[current["recovery_action"]]
             current["status"] = final_status
             current["execution_outcome"] = "NO_AUTOMATED_ACTION"
             current["executed_at"] = datetime.now().isoformat()
 
             attempts.append(
                 {
-                    "action": decision["action"],
+                    "action": current["recovery_action"],
                     "reasoning": decision["reasoning"],
+                    "review": review["review_reasoning"],
                     "outcome": "NO_ATTEMPT_MADE",
                 }
             )
@@ -44,8 +55,9 @@ def run_recovery_loop(payment: dict, max_iterations: int = 5) -> dict:
 
         attempts.append(
             {
-                "action": decision["action"],
+                "action": current["recovery_action"],
                 "reasoning": decision["reasoning"],
+                "review": review["review_reasoning"],
                 "outcome": outcome["execution_outcome"],
                 "retry_count_after": outcome["retry_count"],
             }

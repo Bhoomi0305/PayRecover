@@ -5,7 +5,11 @@ import argparse
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from backend.data.failure_taxonomy import FAILURE_TAXONOMY, AMBIGUOUS_RAW_MESSAGES
+from backend.data.failure_taxonomy import (
+    FAILURE_TAXONOMY,
+    AMBIGUOUS_RAW_MESSAGES,
+    METHOD_COMPATIBLE_CODES,
+)
 
 random.seed(42)
 
@@ -37,13 +41,15 @@ def random_timestamp(days_back=14):
 
 
 def generate_payment():
+    payment_method = random.choice(PAYMENT_METHODS)
     is_ambiguous = random.random() < 0.35
 
     if is_ambiguous:
         failure_code = "AMBIGUOUS"
         raw_message = random.choice(AMBIGUOUS_RAW_MESSAGES)
     else:
-        failure_code = random.choice(CLEAN_FAILURE_CODES)
+        compatible_codes = METHOD_COMPATIBLE_CODES[payment_method]
+        failure_code = random.choice(compatible_codes)
         raw_message = FAILURE_TAXONOMY[failure_code]["description"]
 
     return {
@@ -51,7 +57,7 @@ def generate_payment():
         "customer_name": random.choice(CUSTOMER_NAMES),
         "amount": round(random.triangular(199, 15000, 800), 2),
         "currency": "INR",
-        "payment_method": random.choice(PAYMENT_METHODS),
+        "payment_method": payment_method,
         "failed_at": random_timestamp(),
         "failure_code": failure_code,
         "raw_gateway_message": raw_message,
