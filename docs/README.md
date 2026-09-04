@@ -39,32 +39,43 @@ Python · FastAPI · Gemini API (3.5 Flash-Lite) · HTML/CSS/JS
 
 ## Project structure
 
-payrecover/
-├── backend/
-│ ├── main.py # FastAPI app + API routes
-│ ├── config.py # env/config loading
-│ ├── data/
-│ │ ├── failure_taxonomy.py # failure categories + strategies
-│ │ ├── generate_data.py # synthetic dataset generator
-│ │ └── \*.json # generated + processed datasets
-│ └── agents/
-│ ├── classifier.py # root-cause classification
-│ ├── batch_classify.py
-│ ├── recovery.py # guardrailed decision logic
-│ ├── execution.py # simulated action execution
-│ ├── recovery_loop.py # decide→execute loop per payment
-│ ├── batch_recovery_loop.py
-│ ├── reviewer.py # compliance review of proposed actions
-│ ├── notifier.py # drafts customer-facing messages
-│ ├── batch_notify.py
-│ └── audit_trail.py # assembles audit log + metrics
-├── frontend/
-│ ├── index.html
-│ ├── style.css
-│ └── app.js
-└── docs/
-├── README.md
-└── architecture.md
+```
+└── 📁payrecover
+    └── 📁.vscode
+        ├── settings.json
+    └── 📁backend
+        └── 📁agents
+            ├── audit_trail.py
+            ├── batch_classify.py
+            ├── batch_notify.py
+            ├── batch_recovery_loop.py
+            ├── classifier.py
+            ├── execution.py
+            ├── notifier.py
+            ├── recovery_loop.py
+            ├── recovery.py
+            ├── reviewer.py
+        └── 📁data
+            ├── audit_trail_full.json
+            ├── classified_payments_full.json
+            ├── executed_payments_full.json
+            ├── failed_payments_full.json
+            ├── failure_taxonomy.py
+            ├── generate_data.py
+            ├── metrics_full.json
+            ├── recovery_decisions_full.json
+        ├── config.py
+        ├── main.py
+    └── 📁docs
+        ├── architecture.md
+        ├── README.md
+    └── 📁frontend
+        ├── app.js
+        ├── index.html
+        ├── style.css
+    ├── .gitignore
+    └── requirements.txt
+```
 
 ## Setup
 

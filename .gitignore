@@ -5,3 +5,4 @@ __pycache__/
 backend/data/*_dev.json
 backend/data/*_custom.json
 scratch/
+.hintrc
