@@ -1,0 +1,138 @@
+[
+  {
+    "payment_id": "pay_TY8zRbF53okcKe",
+    "customer_name": "void@razorpay.com",
+    "amount": 500.0,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-05T05:09:09.380865",
+    "stage_1_original_failure": {
+      "reported_code": "AMBIGUOUS",
+      "raw_gateway_message": "Your payment didn't go through as it was declined by the bank. Try another payment method or contact your bank."
+    },
+    "stage_2_classification": {
+      "resolved_code": "RISK_BLOCKED",
+      "method": "LLM",
+      "confidence": 0.8,
+      "reasoning": "The bank declined the payment generically, which often indicates a risk or security block when no specific reason like insufficient funds is provided."
+    },
+    "stage_3_recovery_decision": {
+      "action": "ESCALATE_HUMAN",
+      "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating."
+    },
+    "stage_3b_compliance_review": {
+      "approved": true,
+      "reasoning": "Not a reviewable action type; passed through."
+    },
+    "stage_4_execution": {
+      "outcome": "NO_AUTOMATED_ACTION",
+      "final_status": "ESCALATED",
+      "retry_count": 0,
+      "executed_at": "2026-09-05T05:09:11.411877"
+    },
+    "narrative": "Payment of INR 500.0 via netbanking failed (Your payment didn't go through as it was declined by the bank. Try another payment method or contact your bank.). Classified as RISK_BLOCKED via LLM (confidence 0.8). Decision: ESCALATE_HUMAN - 'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating. Outcome: NO_AUTOMATED_ACTION, final status ESCALATED.",
+    "source": "LIVE_RAZORPAY_WEBHOOK"
+  },
+  {
+    "payment_id": "pay_TY94bAKb4qtObk",
+    "customer_name": "void@razorpay.com",
+    "amount": 500.0,
+    "currency": "INR",
+    "payment_method": "card",
+    "failed_at": "2026-09-05T05:13:58.459330",
+    "stage_1_original_failure": {
+      "reported_code": "AMBIGUOUS",
+      "raw_gateway_message": "Payment failed"
+    },
+    "stage_2_classification": {
+      "resolved_code": "CARD_DECLINED_BY_ISSUER",
+      "method": "LLM",
+      "confidence": 0.5,
+      "reasoning": "The generic failure message does not provide specific details, so it defaults to a general issuer decline."
+    },
+    "stage_3_recovery_decision": {
+      "action": "ESCALATE_HUMAN",
+      "reasoning": "Classification confidence (0.5) below threshold (0.6). Needs human review."
+    },
+    "stage_3b_compliance_review": {
+      "approved": true,
+      "reasoning": "Not a reviewable action type; passed through."
+    },
+    "stage_4_execution": {
+      "outcome": "NO_AUTOMATED_ACTION",
+      "final_status": "ESCALATED",
+      "retry_count": 0,
+      "executed_at": "2026-09-05T05:14:00.390601"
+    },
+    "narrative": "Payment of INR 500.0 via card failed (Payment failed). Classified as CARD_DECLINED_BY_ISSUER via LLM (confidence 0.5). Decision: ESCALATE_HUMAN - Classification confidence (0.5) below threshold (0.6). Needs human review. Outcome: NO_AUTOMATED_ACTION, final status ESCALATED.",
+    "source": "LIVE_RAZORPAY_WEBHOOK"
+  },
+  {
+    "payment_id": "pay_TY99nhfQcQKZaX",
+    "customer_name": "void@razorpay.com",
+    "amount": 100.0,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-05T05:18:54.123667",
+    "stage_1_original_failure": {
+      "reported_code": "AMBIGUOUS",
+      "raw_gateway_message": "Your payment didn't go through as it was declined by the bank. Try another payment method or contact your bank."
+    },
+    "stage_2_classification": {
+      "resolved_code": "RISK_BLOCKED",
+      "method": "LLM",
+      "confidence": 0.8,
+      "reasoning": "The bank declined the payment due to security or policy reasons without specifying a technical or balance issue."
+    },
+    "stage_3_recovery_decision": {
+      "action": "ESCALATE_HUMAN",
+      "reasoning": "'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating."
+    },
+    "stage_3b_compliance_review": {
+      "approved": true,
+      "reasoning": "Not a reviewable action type; passed through."
+    },
+    "stage_4_execution": {
+      "outcome": "NO_AUTOMATED_ACTION",
+      "final_status": "ESCALATED",
+      "retry_count": 0,
+      "executed_at": "2026-09-05T05:18:55.306772"
+    },
+    "narrative": "Payment of INR 100.0 via netbanking failed (Your payment didn't go through as it was declined by the bank. Try another payment method or contact your bank.). Classified as RISK_BLOCKED via LLM (confidence 0.8). Decision: ESCALATE_HUMAN - 'RISK_BLOCKED' is not recoverable and not customer-fixable. Escalating. Outcome: NO_AUTOMATED_ACTION, final status ESCALATED.",
+    "source": "LIVE_RAZORPAY_WEBHOOK"
+  },
+  {
+    "payment_id": "pay_TY9AgIzz4Zwbxa",
+    "customer_name": "void@razorpay.com",
+    "amount": 100.0,
+    "currency": "INR",
+    "payment_method": "netbanking",
+    "failed_at": "2026-09-05T05:19:39.425648",
+    "stage_1_original_failure": {
+      "reported_code": "AMBIGUOUS",
+      "raw_gateway_message": "Your payment didn't go through as it was declined by the bank. Try another payment method or contact your bank."
+    },
+    "stage_2_classification": {
+      "resolved_code": "GATEWAY_TIMEOUT",
+      "method": "LLM",
+      "confidence": 0.5,
+      "reasoning": "The generic bank decline message lacks specific details, often defaulting to a gateway timeout or general failure."
+    },
+    "stage_3_recovery_decision": {
+      "action": "ESCALATE_HUMAN",
+      "reasoning": "Classification confidence (0.5) below threshold (0.6). Needs human review."
+    },
+    "stage_3b_compliance_review": {
+      "approved": true,
+      "reasoning": "Not a reviewable action type; passed through."
+    },
+    "stage_4_execution": {
+      "outcome": "NO_AUTOMATED_ACTION",
+      "final_status": "ESCALATED",
+      "retry_count": 0,
+      "executed_at": "2026-09-05T05:19:40.676285"
+    },
+    "narrative": "Payment of INR 100.0 via netbanking failed (Your payment didn't go through as it was declined by the bank. Try another payment method or contact your bank.). Classified as GATEWAY_TIMEOUT via LLM (confidence 0.5). Decision: ESCALATE_HUMAN - Classification confidence (0.5) below threshold (0.6). Needs human review. Outcome: NO_AUTOMATED_ACTION, final status ESCALATED.",
+    "source": "LIVE_RAZORPAY_WEBHOOK"
+  }
+]
