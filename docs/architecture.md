@@ -217,19 +217,7 @@ classification logic. This reinforces the design decision to route
 low-confidence or inherently ambiguous cases toward human escalation
 rather than fully trusting a single automated classification.
 
-**Simulated execution outcomes.** Since this system doesn't have access
-to real bank rails, execution success/failure is simulated using
-assumed probabilities per action type (e.g. immediate retries succeed
-more often than asking a customer to try an entirely new payment
-method). These are reasonable, documented assumptions, not measured
-real-world rates.
-
-**Provider-agnostic design.** The classifier's LLM integration was built
-against OpenAI initially and switched to Gemini mid-build with changes
-isolated to `config.py` and the API-calling portion of `classifier.py`
-— the decision logic, execution, and audit trail layers required no
-changes, since the classifier's output contract (`resolved_code`,
-`method`, `confidence`, `reasoning`) is the same regardless of provider.
+## Resolved limitations
 
 **Payment-method-aware classification.** Early iterations allowed the
 classifier to assign failure codes inconsistent with the payment
