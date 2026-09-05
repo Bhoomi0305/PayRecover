@@ -25,7 +25,7 @@ When a payment fails, PayRecover:
 6. **Notifies** the customer, where applicable, via a drafted
    message generated after the outcome is final
 
-See [`docs/architecture.md`](docs/architecture.md) for the full design,
+See [`docs/architecture.md`](architecture.md) for the full design,
 guardrails, and known limitations.
 
 ## Results (150 synthetic failed payments)
